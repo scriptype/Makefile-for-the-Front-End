@@ -26,7 +26,7 @@ Makefiles (i.e: not Windows as far as I know).
 # Clone the repository
 git clone git@github.com:scriptype/Makefile-for-the-Front-End.git
 
-# Go the project directory
+# Go to project directory
 cd Makefile-for-the-Front-End
 
 # Install dependencies
