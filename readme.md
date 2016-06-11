@@ -22,8 +22,14 @@ It's flat. You read a Makefile in sequential order, with no indirection.
 You need `Node` and `npm` installed on your machine which is capable of running 
 Makefiles (i.e: not Windows as far as I know).
 
-Install dependencies:
-```sh
+```
+# Clone the repository
+git clone git@github.com:scriptype/Makefile-for-the-Front-End.git
+
+# Go the project directory
+cd Makefile-for-the-Front-End
+
+# Install dependencies
 npm i
 ```
 
