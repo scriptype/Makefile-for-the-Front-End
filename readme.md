@@ -38,7 +38,7 @@ Besides modules used in Makefile, `react` and `react-dom` for JS and
 
 ## Run
 
-### Development
+#### Development
 
 ```sh
 make
@@ -49,7 +49,7 @@ node server dev
 
 When finished, head over to `localhost:8989/dist`
 
-### Release
+#### Production
 
 ```sh
 make release
