@@ -8,6 +8,19 @@ that I no longer continue.
 You can clone this repository to kickstart a frontend project. Required folder 
 structure is set up for Makefile to work.
 
+#### TL;DR
+
+ - Use static non-preprocessed CSS with livereload to give lightning-fast 
+ prototyping abilities.
+
+ - Use watchify + babelify to compile JSX and enable ES2015. Also auto-refresh 
+ the browser.
+
+ - Minify HTML, CSS, JS for production.
+
+ - Use PostCSS plugins (@import, autoprefixer) for production CSS.
+
+
 ## Why Make?
 
 I'm using Make to manage ops-side of my front-end projects because it's simple.
