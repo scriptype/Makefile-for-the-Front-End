@@ -1,0 +1,16 @@
+/*
+ * This is pure CSS.
+ *
+ * "@import" will cause browser to make requests. Don't worry, it's only for 
+ * keeping the development tasks faster. All CSS files will be bundled in your
+ * production app.
+ *
+ * You don't need to write any vendor prefix, assuming you're using a modern 
+ * browser during development. Your production CSS will be autoprefixed.
+ * */
+
+@import './hello_world.css';
+
+body {
+  font: normal 400 100%/1.6 helvetica, arial, sans-serif;
+}

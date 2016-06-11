@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project Title</title>
+    <meta name="charset" content="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Project Title" />
+    <link rel="stylesheet" href="{{ STYLE_FILE }}">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script async defer type="text/javascript" src="{{ SCRIPT_FILE }}"></script>
+    {{#if LIVE_RELOAD}}
+      <script>
+        document.write(
+          '<script src="http://' +
+              (location.host || 'localhost').split(':')[0] +
+              ':35729/livereload.js?snipver=1"></' +
+              'script>'
+	)
+      </script>
+    {{/if}}
+  </body>
+</html>
