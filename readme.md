@@ -1,3 +1,5 @@
+![Screenshot of Makefile](https://cdn.pbrd.co/images/1C4pcDgo.png)
+
 # Makefile for the Front End
 
 I've used this Makefile for a fast development environment for a side-project 
