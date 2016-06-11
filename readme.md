@@ -13,12 +13,12 @@ structure is set up for Makefile to work.
  - Use static non-preprocessed CSS with livereload to give lightning-fast 
  prototyping abilities.
 
- - Use watchify + babelify to compile JSX and enable ES2015. Also auto-refresh 
+ - Use [watchify](https://github.com/substack/watchify) + [babelify](https://github.com/babel/babelify) to compile JSX and enable ES2015. Also auto-refresh 
  the browser.
 
- - Minify HTML, CSS, JS for production.
+ - Minify HTML ([html-minifier](https://github.com/kangax/html-minifier)), CSS ([cssnano](https://github.com/ben-eb/cssnano)), JS ([uglifyjs](https://github.com/mishoo/UglifyJS2)) for production.
 
- - Use PostCSS plugins (@import, autoprefixer) for production CSS.
+ - Use PostCSS plugins ([import](https://github.com/postcss/postcss-import), [autoprefixer](https://github.com/postcss/autoprefixer)) for production CSS.
 
 
 ## Why Make?
