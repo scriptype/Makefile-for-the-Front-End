@@ -4,19 +4,19 @@ I've used this Makefile for a fast development environment for a side-project
 that I no longer continue.
 
 You can clone this repository to kickstart a frontend project. Required folder 
-structure for the Makefile to work is set up.
+structure is set up for Makefile to work.
 
 ## Setup
 
 You need `Node` and `npm` installed on your machine which is capable of running 
 Makefiles (i.e: not Windows as far as I know).
 
-Install dependencies before running `make`.
+Install dependencies:
 ```sh
 npm i
 ```
 
-Besides modules used in Makefile, `react` and `react-dom` for JS side and 
+Besides modules used in Makefile, `react` and `react-dom` for JS and 
 `express` for dev-server will also be installed. They are not mandatory.
 
 ## Run
@@ -30,7 +30,7 @@ make
 node server dev
 ```
 
-then head over to `localhost:8989/dist`
+When finished, head over to `localhost:8989/dist`
 
 ### Release
 
@@ -41,7 +41,7 @@ make release
 node server prod
 ```
 
-then head over to `localhost:8989`
+When finished, head over to `localhost:8989`
 
 ## Notes
 
@@ -52,9 +52,9 @@ then head over to `localhost:8989`
 
   - JS files are preprocessed for compiling `JSX` and enabling `ES2015` syntax.
 
-  - `Watchify` is used for JS source, which is combined with `livereload`.
+  - `Watchify` is used in combination with `livereload` for JS source.
 
-  - Doesn't use a CSS pre-processor. CSS files are completely static in dev mode, 
+  - No CSS pre-processor was used. CSS files are completely static in dev mode and 
   source files are directly used. You get an experience similar to  prototyping in 
   browser thanks to livereload.
 
@@ -67,7 +67,7 @@ then head over to `localhost:8989`
 
   - When releasing the project:
 
-    - `@import`ed files will be concatenated into a single file.
+    - `@import`ed css files will be concatenated into a single file.
 
     - CSS will be autoprefixed.
 
@@ -78,8 +78,8 @@ then head over to `localhost:8989`
 ## Contribution
 
 Don't hesitate to open issues and making pull requests. When doing that, consider 
-this boilerplate is aimed to have minimum complexity. Implementing tools like redux
-is out of scope for this project.
+this boilerplate is aimed to have minimum complexity. e.g: Implementing redux for JS 
+is out of scope of this project.
 
 ## Licence
 MIT License
