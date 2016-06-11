@@ -1,4 +1,4 @@
-![Screenshot of Makefile](https://cdn.pbrd.co/images/1C4pcDgo.png)
+![Screenshot of Makefile](https://cdn.pbrd.co/images/1C4FPlj3.png)
 
 # Makefile for the Front End
 
