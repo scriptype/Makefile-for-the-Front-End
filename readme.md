@@ -6,6 +6,17 @@ that I no longer continue.
 You can clone this repository to kickstart a frontend project. Required folder 
 structure is set up for Makefile to work.
 
+## Why Make?
+
+I'm using Make to manage ops-side of my front-end projects because it's simple.
+In Gulp, Grunt or Webpack or any other tool, you have to comprehend the complexity
+of programmatic usage and learn to use how some 3rd party abstraction works.
+
+When, instead, Make is used for the same tasks, it's much easier for anyone to
+contribute, fix or make any kind of change on the build script (at least for me). 
+It's not asynchronous, it doesn't give you abstractions to "make your job easier". 
+It's flat. You read a Makefile in sequential order, with no indirection.
+
 ## Setup
 
 You need `Node` and `npm` installed on your machine which is capable of running 
@@ -53,6 +64,9 @@ When finished, head over to `localhost:8989`
   - JS files are preprocessed for compiling `JSX` and enabling `ES2015` syntax.
 
   - `Watchify` is used in combination with `livereload` for JS source.
+
+  - Handlebars is used in `index.html` to dynamically manipulate the path of JS 
+  and CSS files according to environment. It also calls livereload script in dev mode.
 
   - No CSS pre-processor was used. CSS files are completely static in dev mode and 
   source files are directly used. You get an experience similar to  prototyping in 
