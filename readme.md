@@ -12,7 +12,7 @@ structure is set up for Makefile to work.
 
 I'm using Make to manage ops-side of my front-end projects because it's simple.
 In Gulp, Grunt or Webpack or any other tool, you have to comprehend the complexity
-of programmatic usage and learn to use how some 3rd party abstraction works.
+of programmatic usage and learn how some 3rd party abstractions work.
 
 When, instead, Make is used for the same tasks, it's much easier for anyone to
 contribute, fix or make any kind of change on the build script (at least for me). 
