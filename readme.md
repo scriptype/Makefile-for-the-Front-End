@@ -10,7 +10,7 @@ structure is set up for Makefile to work.
 
 #### TL;DR
 
- - Use static non-preprocessed CSS with [livereload](https://github.com/napcs/node-livereload) to give lightning-fast 
+ - Use [static, non-preprocessed CSS](https://css-tricks.com/dont-use-css-preprocessors/) with [livereload](https://github.com/napcs/node-livereload) to give lightning-fast 
  prototyping abilities.
 
  - Use [watchify](https://github.com/substack/watchify) + [babelify](https://github.com/babel/babelify) to compile JSX and enable ES2015. Also auto-refresh 
