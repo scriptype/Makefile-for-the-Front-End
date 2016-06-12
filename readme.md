@@ -82,15 +82,11 @@ When finished, head over to `localhost:8989`
   - `Express` dependency is for `server.js`. You can remove it and handle 
   dev-server however you like. `env.js` is also used only in `server.js`
 
-  - JS files are preprocessed for compiling `JSX` and enabling `ES2015` syntax.
-
-  - `Watchify` is used in combination with `livereload` for JS source.
-
   - Handlebars is used in `index.html` to dynamically manipulate the path of JS 
   and CSS files according to environment. It also calls livereload script in dev mode.
 
-  - No CSS pre-processor was used. CSS files are completely static in dev mode and 
-  source files are directly used. You get an experience similar to  prototyping in 
+  - No CSS pre-processor was used. CSS files are completely static and source files 
+  are directly used in dev mode. You get an experience similar to prototyping in 
   browser thanks to livereload.
 
   - As `src/style.css` is used during development, your __dev server should serve 
@@ -98,25 +94,22 @@ When finished, head over to `localhost:8989`
   still in /dist, in order to view the page in browser, __you should type 
   `localhost:port/dist` in address bar__. This is not a problem after release.
 
-  - You can see `@import` rules actually cause requests to css files in dev mode.
-
   - When releasing the project:
 
-    - `@import`ed css files will be concatenated into a single file.
+    - CSS will be autoprefixed and `@imports` will be concatenated into a single file.
 
-    - CSS will be autoprefixed.
-
-    - JS modules will be babelified to normalize JSX and ES2015.
+    - JS modules will be babelified with `react` and `es2015` presets.
 
     - HTML, JS and CSS outputs will be minified.
 
 ## Contribution
 
-Don't hesitate to open issues and making pull requests. When doing that, consider 
+Please don't hesitate to open issues and making pull requests. When doing that, consider 
 this boilerplate is aimed to have minimum complexity. e.g: Implementing redux for JS 
 is out of scope of this project.
 
 ## Licence
+```
 MIT License
 
 Copyright (c) 2016 Mustafa Enes Ertarhanacı
@@ -138,3 +131,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
