@@ -77,7 +77,7 @@ When finished, head over to `localhost:8989`
 
 ## Notes
 
-  - It's far from being perfect (and it's not intented to be).
+  - It's far from being perfect (and it's not intended to be).
 
   - `Express` dependency is for `server.js`. You can remove it and handle 
   dev-server however you like. `env.js` is also used only in `server.js`
