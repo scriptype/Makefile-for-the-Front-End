@@ -81,7 +81,7 @@ watch_js:
 		--delay=100 \
 		--verbose \
 		--transform [ babelify --presets [ es2015 react ] ] \
-		--outfile $(JS_OUTPUT)
+		--outfile $(JS_OUTPUT) \
 		--debug \
 		$(JS_INPUT)
 
