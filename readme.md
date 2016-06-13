@@ -104,9 +104,9 @@ When finished, head over to `localhost:8989`
 
 ## Contribution
 
-Please don't hesitate to open issues and making pull requests. When doing that, consider 
-this boilerplate is aimed to have minimum complexity. e.g: Implementing redux for JS 
-is out of scope of this project.
+Please don't hesitate to open issues and making pull requests. When doing that, 
+consider this boilerplate is aimed to have minimum complexity. e.g: Implementing 
+redux is out of scope of this project.
 
 ## Licence
 ```
