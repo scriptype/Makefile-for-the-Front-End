@@ -57,9 +57,6 @@ Besides modules used in Makefile, `react` and `react-dom` for JS and
 
 ```sh
 make
-
-# in a separate session:
-node server dev
 ```
 
 When finished, head over to `localhost:8989/dist`
@@ -68,9 +65,6 @@ When finished, head over to `localhost:8989/dist`
 
 ```sh
 make release
-
-# in a separate session:
-node server prod
 ```
 
 When finished, head over to `localhost:8989`

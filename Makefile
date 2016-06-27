@@ -17,10 +17,10 @@ JS_OUTPUT_MIN = $(DIST)/all.min.js
 
 all: clean copy_static html js
 	@echo "Finished $@. `date`"
-	@make watch
+	@make watch & node server dev
 
 release: clean copy_static post_html post_css post_js
-	@echo "Finished $@. `date`"
+	@echo "Finished $@. `date`" & node server prod
 
 clean:
 	@echo "Cleaning..."
@@ -28,8 +28,7 @@ clean:
 	@mkdir $(DIST)
 
 watch:
-	@make watch_js & \
-		$(BIN)/livereload "$(DIST), $(CSS_INPUT_DIR)"
+	@make watch_js & $(BIN)/livereload "$(DIST), $(CSS_INPUT_DIR)"
 
 html:
 	@make replace_path \
