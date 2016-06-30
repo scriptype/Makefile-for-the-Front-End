@@ -15,6 +15,9 @@ JS_INPUT = $(JS_INPUT_DIR)/app.js
 JS_OUTPUT = $(DIST)/all.js
 JS_OUTPUT_MIN = $(DIST)/all.min.js
 
+PROD_CSS_PATH = style.min.css
+PROD_JS_PATH = all.min.js
+
 all: clean copy_static html js
 	@echo "Finished $@. `date`"
 	@make watch & node server dev
@@ -38,8 +41,8 @@ html:
 
 post_html:
 	@make replace_path \
-		SCRIPT_FILE=$(JS_OUTPUT_MIN) \
-		STYLE_FILE=$(CSS_OUTPUT_MIN) \
+		SCRIPT_FILE=$(PROD_JS_PATH) \
+		STYLE_FILE=$(PROD_CSS_PATH) \
 		LIVE_RELOAD='false'
 	@echo "Minifying markup..."
 	@$(BIN)/html-minifier \
@@ -100,15 +103,11 @@ replace_path:
 	@echo "Updating markup..."
 	@$(BIN)/handlebars $(HTML_INPUT) -f $(DIST)/tmp.index.hbs.js
 	@node -p " \
-	  var path = require('path'); \
 	  var Handlebars = require('handlebars'); \
 	  var template = require('./$(DIST)/tmp.index.hbs.js'); \
-	  var scriptPath = path.resolve('$(SCRIPT_FILE)'); \
-	  var stylePath = path.resolve('$(STYLE_FILE)'); \
-	  process.chdir('$(DIST)'); \
 	  Handlebars.templates['index.html']({ \
-	    SCRIPT_FILE: path.relative(process.cwd(), scriptPath), \
-	    STYLE_FILE: path.relative(process.cwd(), stylePath), \
+	    SCRIPT_FILE: '$(SCRIPT_FILE)', \
+	    STYLE_FILE: '$(STYLE_FILE)', \
 	    LIVE_RELOAD: $(LIVE_RELOAD) \
 	  }) \
 	" > $(HTML_OUTPUT)

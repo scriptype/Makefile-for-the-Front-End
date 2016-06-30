@@ -59,7 +59,7 @@ Besides modules used in Makefile, `react` and `react-dom` for JS and
 make
 ```
 
-When finished, head over to `localhost:8989/dist`
+When finished, head over to `localhost:8080`
 
 #### Production
 
@@ -67,14 +67,14 @@ When finished, head over to `localhost:8989/dist`
 make release
 ```
 
-When finished, head over to `localhost:8989`
+When finished, head over to `localhost:8080`
 
 ## Notes
 
   - It's far from being perfect (and it's not intended to be).
 
   - `Express` dependency is for `server.js`. You can remove it and handle 
-  dev-server however you like. `env.js` is also used only in `server.js`
+  dev-server however you like.
 
   - Handlebars is used in `index.html` to dynamically manipulate the path of JS 
   and CSS files according to environment. It also calls livereload script in dev mode.
@@ -82,11 +82,6 @@ When finished, head over to `localhost:8989`
   - No CSS pre-processor was used. CSS files are completely static and source files 
   are directly used in dev mode. You get an experience similar to prototyping in 
   browser thanks to livereload.
-
-  - As `src/style.css` is used during development, your __dev server should serve 
-  root directory__ of project instead of only `/dist`. Yet since `index.html` is 
-  still in /dist, in order to view the page in browser, __you should type 
-  `localhost:port/dist` in address bar__. This is not a problem after release.
 
   - When releasing the project:
 
@@ -99,8 +94,8 @@ When finished, head over to `localhost:8989`
 ## Contribution
 
 Please don't hesitate to open issues and making pull requests. When doing that, 
-consider this boilerplate is aimed to have minimum complexity. e.g: Implementing 
-redux is out of scope of this project.
+consider that this boilerplate is aimed to have minimum complexity. e.g: Implementing 
+redux is out of scope in this project.
 
 ## Licence
 ```
