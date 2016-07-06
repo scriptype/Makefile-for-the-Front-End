@@ -22,8 +22,11 @@ all: clean copy_static html js
 	@echo "Finished $@. `date`"
 	@make watch & node server dev
 
-release: clean copy_static post_html post_css post_js
+_release: clean copy_static post_html post_css post_js
 	@echo "Finished $@. `date`" & node server prod
+
+release:
+	@NODE_ENV=production make _release
 
 clean:
 	@echo "Cleaning..."
@@ -89,7 +92,10 @@ watch_js:
 
 post_js: js
 	@echo "Minifying scripts..."
-	@$(BIN)/uglifyjs $(JS_OUTPUT) -o $(JS_OUTPUT_MIN)
+	@$(BIN)/uglifyjs $(JS_OUTPUT) \
+		--mangle \
+		--compress \
+		--output $(JS_OUTPUT_MIN)
 	@rm $(JS_OUTPUT)
 
 copy_static:
