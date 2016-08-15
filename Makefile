@@ -20,7 +20,11 @@ PROD_JS_PATH = all.min.js
 
 all: clean copy_static html js
 	@echo "Finished $@. `date`"
-	@make watch & $(BIN)/nodemon server.js dev
+	@make watch &
+		$(BIN)/nodemon \
+			--ignore $(SRC) \
+			--ignore $(DIST) \
+			server.js dev
 
 _release: clean copy_static post_html post_css post_js
 	@echo "Finished $@. `date`" & node server.js prod
