@@ -20,7 +20,7 @@ PROD_JS_PATH = all.min.js
 
 all: clean copy_static html js
 	@echo "Finished $@. `date`"
-	@make watch &
+	@make watch & \
 		$(BIN)/nodemon \
 			--ignore $(SRC) \
 			--ignore $(DIST) \
